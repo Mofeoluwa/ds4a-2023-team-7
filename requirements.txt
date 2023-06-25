@@ -1,0 +1,13 @@
+SQLAlchemy
+sqlalchemy-utils
+sqlalchemy-schemadisplay
+pandas
+scipy
+sodapy
+plotly
+nbformat>=4.2.0
+matplotlib
+statsmodels
+yfinance
+numpy
+seaborn
