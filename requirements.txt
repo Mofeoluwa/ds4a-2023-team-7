@@ -11,3 +11,5 @@ statsmodels
 yfinance
 numpy
 seaborn
+sklearn
+scikit-learn
