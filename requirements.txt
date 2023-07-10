@@ -13,3 +13,5 @@ numpy
 seaborn
 sklearn
 scikit-learn
+dash
+dash-bootstrap-components
