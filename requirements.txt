@@ -15,3 +15,4 @@ sklearn
 scikit-learn
 dash
 dash-bootstrap-components
+dash_mantine_components
