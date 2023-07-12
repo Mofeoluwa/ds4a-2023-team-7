@@ -12,15 +12,14 @@ import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
 import pandas as pd
 from datetime import *
+from app_styles import *
+from data.dhs_data import *
 
-external_stylesheets = [
-                      dbc.themes.PULSE
-                    , "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-                    ]
+external_stylesheets = [dbc.themes.DARKLY]
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets,suppress_callback_exceptions=True)
 
-
 date_range_select = dcc.DatePickerRange(
+        style=date_picker_style,
         id="date-range",
         min_date_allowed=datetime(2013, 1, 1),
         max_date_allowed=datetime.today(),
@@ -28,12 +27,33 @@ date_range_select = dcc.DatePickerRange(
         end_date=datetime.today(),
     )
 
-output = dcc.Graph(style={'width':'90vw',
-                          'height':'50vw'},
+metric_select = dhs_daily_df.columns
+
+output = dcc.Graph(style=graph_col_style,
                    id="graph")
 
-app.layout = html.Div([
-    dbc.Row(date_range_select),
-    dbc.Row(output),
+app.layout = dbc.Container([
+    dcc.Markdown(
+            "# Exploring Housing Insecurity in NYC",
+            style={"textAlign": "center"},
+            className="header",
+        ),
+    
+    dbc.Row([
+        dbc.Tabs(
+            id='tabs',
+            children=[
+                dcc.Tab(
+                    label='YoY Time Series',
+                    children=[
+                        dbc.Row(children= [date_range_select],justify='center'),
+                        dbc.Row(children= [output]),
+                    ]
+                ) 
+            ]
+            
+        )
+    ])
 ])
+
 

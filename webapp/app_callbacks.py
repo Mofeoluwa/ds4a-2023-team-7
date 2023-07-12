@@ -18,7 +18,7 @@ from datetime import *
 @app.callback(
     Output("graph", "figure"),
     Input("date-range", "start_date"),
-    Input("date-range", "end_date")
+    Input("date-range", "end_date"),
 )
 def data_visualization(start_date, end_date):
 
@@ -35,6 +35,7 @@ def data_visualization(start_date, end_date):
         filtered_data,
         x=filtered_data.index,
         y='total_individuals_in_shelter',
+        #y=metric_select 
         color_discrete_sequence=['orange'],
         labels=dict(
             x='Date',
