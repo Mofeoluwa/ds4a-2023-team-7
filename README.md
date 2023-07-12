@@ -8,6 +8,6 @@ Purpose: repo to track work for DS4A Capstone Project for team 7
 - install packages: `pip3 install -r requirements.txt`
 
 ## Research Topic
-- Investigating the Intersection of NYC Housing Insecurity and Financial Markets from a Socio-economic Perspective
+- How can data science inform housing insecurity policies?
 
 
