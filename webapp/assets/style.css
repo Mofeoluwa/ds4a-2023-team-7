@@ -1,0 +1,30 @@
+.input{
+    color:white;
+}
+
+.standard-dropdown .Select-control {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(237, 237, 237);
+}
+
+.standard-dropdown .Select-option {
+    color: rgb(211, 143, 48);
+}
+
+.standard-calendar .DayPicker {
+    background-color: silver;
+}
+
+.standard-calendar .DayPicker-Day {
+    background-color:sienna;
+}
+
+.standard-calendar .DayPicker-Day--selected:not(.DayPicker-Day--outside):not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected-start):not(.DayPicker-Day--selected-end):not(.DayPicker-Day--selected-span) {
+    background-color: sienna;
+}
+
+.standard-button button {
+    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 10px;
+}
