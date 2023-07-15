@@ -11,3 +11,6 @@ statsmodels
 yfinance
 numpy
 seaborn
+scikit-learn
+scikit-optimize
+xgboost
